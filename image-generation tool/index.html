@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-Time Captioning with Contextual Images</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Real-Time Captioning with Contextual Images</h1>
+      <p>Start speaking to see your words transformed into text and relevant educational images</p>
+      
+      <button id="toggleButton" class="button">
+        <svg id="micIcon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" x2="12" y1="19" y2="22"></line></svg>
+        <span id="buttonText">Start Listening</span>
+      </button>
+      <div id="error" class="error"></div>
+    </div>
+
+    <div class="content">
+      <div class="section">
+        <div class="section-header">
+          <h2>Transcripts</h2>
+          <button id="clearTranscripts" class="clear-button">Clear Transcripts</button>
+        </div>
+        <div id="transcriptBox" class="transcript-box"></div>
+      </div>
+
+      <div class="section">
+        <div class="section-header">
+          <h2>Educational Images</h2>
+          <button id="clearImages" class="clear-button">Clear Images</button>
+          <div id="loader" class="loader hidden"></div>
+        </div>
+        <div id="imageGallery" class="image-gallery"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

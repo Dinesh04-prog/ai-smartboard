@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 800px;
+}
+
+/* Toolbar */
+/* Toolbar - Vertical Layout Inside Canvas */
+.toolbar {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Toolbar Buttons - Square with Only Icons */
+.toolbar button {
+    width: 40px; /* Square size */
+    height: 40px;
+    font-size: 20px; /* Larger icon */
+    background: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+.toolbar button:hover {
+    background: #ddd;
+}
+
+/* Adjust Canvas Position to Fit Toolbar */
+/* Whiteboard Container */
+.canvas-container {
+    position: relative; /* Ensures toolbar stays inside */
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Whiteboard */
+canvas {
+    background: white;
+    border: 2px solid black;
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    display: block;
+    position: relative;
+}
+
+/* Toolbar - Vertical Layout Inside Canvas */
+.toolbar {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.3); /* Slight transparency */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Toolbar Buttons - Square with Only Icons */
+.toolbar button {
+    width: 40px; /* Square size */
+    height: 40px;
+    font-size: 20px; /* Larger icon */
+    background: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+.toolbar button:hover {
+    background: #ddd;
+}
+
+
+/* canvas {
+    background: white;
+    border: 2px solid black;
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    display: block;
+} */
+
+
+
+/* Text Display Area */
+#text-container {
+    width: 100%;
+    max-width: 800px;
+    height: 200px;
+    border: 1px solid gray;
+    background: white;
+    margin-top: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    text-align: left; /* Left-aligned text */
+    align-items: flex-start; /* Ensure content starts from the left */
+}
+
+/* Text Styling */
+.transcribed-text {
+    font-size: 16px;
+    margin-bottom: 5px;
+    text-align: left;
+    padding: 5px;
+    outline: none; /* Removes blue focus box */
+    border: none; /* No border while editing */
+    cursor: text;
+}
+
+/* Remove highlight on focus */
+.transcribed-text:focus {
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+#start-speaking {
+    background-color: red;
+}
